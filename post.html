@@ -68,10 +68,38 @@
       gap: 16px;
     }
 
+    /* Product thumbnail wrapper */
+    .pcard-img-wrap {
+      position: relative;
+      width: 72px;
+      height: 72px;
+      flex-shrink: 0;
+    }
+    .pcard-img {
+      width: 72px;
+      height: 72px;
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+    }
+    .pcard-img-num {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      background: rgba(255,255,255,0.88);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: #b07d56;
+      padding: 1px 5px;
+      border-radius: 4px;
+      line-height: 1.4;
+    }
+
     /* Redesigned product card — horizontal, price + CTA always visible */
     .pcard {
       display: grid;
-      grid-template-columns: 52px 1fr auto;
+      grid-template-columns: 72px 1fr auto;
       align-items: center;
       gap: 16px;
       background: #fff;
@@ -175,9 +203,10 @@
     /* Sticky bottom bar on mobile */
     @media (max-width: 600px) {
       .pcard {
-        grid-template-columns: 40px 1fr;
+        grid-template-columns: 64px 1fr;
         grid-template-rows: auto auto;
       }
+      .pcard-img-wrap, .pcard-img { width: 64px; height: 64px; }
       .pcard-cta {
         grid-column: 1 / -1;
         flex-direction: row;
@@ -244,7 +273,7 @@
 
     <!-- 01 -->
     <div class="pcard">
-      <div class="pcard-num">01</div>
+      <div class="pcard-img-wrap"><img class="pcard-img" src="https://images.unsplash.com/photo-1603905580370-d63e08d36cce?w=150&q=80" alt="Capri Blue Volcano Candle"/><span class="pcard-img-num">01</span></div>
       <div class="pcard-body">
         <p class="pcard-title">Capri Blue Volcano Candle</p>
         <p class="pcard-desc">Tropical fruits & sugared citrus. Thousands of 5-star reviews.</p>
@@ -258,7 +287,7 @@
 
     <!-- 02 -->
     <div class="pcard">
-      <div class="pcard-num">02</div>
+      <div class="pcard-img-wrap"><img class="pcard-img" src="https://images.unsplash.com/photo-1599305090598-fe179d501227?w=150&q=80" alt="Mrs. Meyer's Soy Candle"/><span class="pcard-img-num">02</span></div>
       <div class="pcard-body">
         <p class="pcard-title">Mrs. Meyer's Clean Day Soy Candle</p>
         <p class="pcard-desc">Soy wax + essential oils. Lavender, Basil, Lemon Verbena. Long lasting.</p>
@@ -272,7 +301,7 @@
 
     <!-- 03 -->
     <div class="pcard">
-      <div class="pcard-num">03</div>
+      <div class="pcard-img-wrap"><img class="pcard-img" src="https://images.unsplash.com/photo-1602028915047-37269d1a73f7?w=150&q=80" alt="Chesapeake Bay Candle"/><span class="pcard-img-num">03</span></div>
       <div class="pcard-body">
         <p class="pcard-title">Chesapeake Bay Candle — Serenity + Calm</p>
         <p class="pcard-desc">Lavender & vanilla blend. Minimalist jar, looks great on any shelf.</p>
@@ -286,7 +315,7 @@
 
     <!-- 04 -->
     <div class="pcard">
-      <div class="pcard-num">04</div>
+      <div class="pcard-img-wrap"><img class="pcard-img" src="https://images.unsplash.com/photo-1608181831718-c9ad3949c82e?w=150&q=80" alt="Yankee Candle"/><span class="pcard-img-num">04</span></div>
       <div class="pcard-body">
         <p class="pcard-title">Yankee Candle Large Jar — Clean Cotton</p>
         <p class="pcard-desc">Fresh & airy scent. Up to 150 hours burn time. Classic American brand.</p>
@@ -300,7 +329,7 @@
 
     <!-- 05 -->
     <div class="pcard">
-      <div class="pcard-num">05</div>
+      <div class="pcard-img-wrap"><img class="pcard-img" src="https://images.unsplash.com/photo-1635950379870-6e4a9b6e2a23?w=150&q=80" alt="Homesick Cozy Fireside Candle"/><span class="pcard-img-num">05</span></div>
       <div class="pcard-body">
         <p class="pcard-title">HOMESICK Candle — Cozy Fireside</p>
         <p class="pcard-desc">Woodsy, smoky, warm. Perfect for fall and winter evenings at home.</p>
@@ -316,7 +345,7 @@
 
     <!-- 06 -->
     <div class="pcard">
-      <div class="pcard-num">06</div>
+      <div class="pcard-img-wrap"><img class="pcard-img" src="https://images.unsplash.com/photo-1616499370260-485b3e5ed653?w=150&q=80" alt="ASAKUKI Diffuser"/><span class="pcard-img-num">06</span></div>
       <div class="pcard-body">
         <p class="pcard-title">ASAKUKI 500ml Essential Oil Diffuser</p>
         <p class="pcard-desc">7 LED colors, runs 10 hrs. Ideal for bedrooms & living rooms.</p>
@@ -330,7 +359,7 @@
 
     <!-- 07 -->
     <div class="pcard">
-      <div class="pcard-num">07</div>
+      <div class="pcard-img-wrap"><img class="pcard-img" src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=150&q=80" alt="URPOWER Diffuser"/><span class="pcard-img-num">07</span></div>
       <div class="pcard-body">
         <p class="pcard-title">URPOWER 2nd Version Essential Oil Diffuser</p>
         <p class="pcard-desc">Compact, silent, doubles as night light. Great for offices & bedrooms.</p>
@@ -344,7 +373,7 @@
 
     <!-- 08 -->
     <div class="pcard">
-      <div class="pcard-num">08</div>
+      <div class="pcard-img-wrap"><img class="pcard-img" src="https://images.unsplash.com/photo-1587556930799-8dca0e5e3e5f?w=150&q=80" alt="InnoGear Diffuser"/><span class="pcard-img-num">08</span></div>
       <div class="pcard-body">
         <p class="pcard-title">InnoGear 150ml Aromatherapy Diffuser</p>
         <p class="pcard-desc">Whisper-quiet, 2 mist settings. Auto shut-off. Over 100K reviews.</p>
@@ -358,7 +387,7 @@
 
     <!-- 09 -->
     <div class="pcard">
-      <div class="pcard-num">09</div>
+      <div class="pcard-img-wrap"><img class="pcard-img" src="https://images.unsplash.com/photo-1585421514738-01798e348b17?w=150&q=80" alt="VITRUVI Stone Diffuser"/><span class="pcard-img-num">09</span></div>
       <div class="pcard-body">
         <p class="pcard-title">VITRUVI Stone Diffuser</p>
         <p class="pcard-desc">Ceramic design, whisper-quiet, 7-hour run. Looks stunning on counters.</p>
@@ -372,7 +401,7 @@
 
     <!-- 10 -->
     <div class="pcard">
-      <div class="pcard-num">10</div>
+      <div class="pcard-img-wrap"><img class="pcard-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=150&q=80" alt="Pura Smart Diffuser"/><span class="pcard-img-num">10</span></div>
       <div class="pcard-body">
         <p class="pcard-title">Pura Smart Home Fragrance Diffuser</p>
         <p class="pcard-desc">App-controlled scent scheduling. Compatible with top fragrance brands.</p>
